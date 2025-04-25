@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./images/logo.jpg" type="image/jpg">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+
+  <title>FlipFlop</title>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <h1>AR-VR Videos</h1>
+  
+  <div class="cards-container">
+    <!-- Video 1 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/1.jpg')">
+          <div class="card-content">
+            <h3>Video 1</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <video src="./videos/video1.mp4"></video>
+          </div>
+          <div class="video-controls" onclick="event.stopPropagation()">
+            <button onclick="playVideo(this)">Play</button>
+            <button onclick="pauseVideo(this)">Pause</button>
+            <input type="range" class="progress-bar" value="0" step="0.1" 
+                   oninput="seekVideo(this)">
+            <span class="time-display">0:00 / 0:00</span>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+    
+    <!-- Video 2 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/2.JPG')">
+          <div class="card-content">
+            <h3>Video 2</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <video src="./videos/video2.mp4"></video>
+          </div>
+          <div class="video-controls" onclick="event.stopPropagation()">
+            <button onclick="playVideo(this)">Play</button>
+            <button onclick="pauseVideo(this)">Pause</button>
+            <input type="range" class="progress-bar" value="0" step="0.1" 
+                   oninput="seekVideo(this)">
+            <span class="time-display">0:00 / 0:00</span>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+    
+    <!-- Video 3 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/3.jpg')">
+          <div class="card-content">
+            <h3>Video 3</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/ZgZccxuj2RY" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+  
+
+    <!-- Video 4 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/4.jpg')">
+          <div class="card-content">
+            <h3>Video 4</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <video src="./videos/video3.mp4"></video>
+          </div>
+          <div class="video-controls" onclick="event.stopPropagation()">
+            <button onclick="playVideo(this)">Play</button>
+            <button onclick="pauseVideo(this)">Pause</button>
+            <input type="range" class="progress-bar" value="0" step="0.1" 
+                   oninput="seekVideo(this)">
+            <span class="time-display">0:00 / 0:00</span>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+    <!-- Video 5 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/5.jpg')">
+          <div class="card-content">
+            <h3>Video 5</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/nffJx51swVQ" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+
+    <!-- Video 6 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/6.jpg')">
+          <div class="card-content">
+            <h3>Video 6</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/ASAz8x74VXw" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+
+    <!-- Video 7 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/7.jpg')">
+          <div class="card-content">
+            <h3>Video 7</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/bV5dtrVg2Fc" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+
+    <!-- Video 8 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/8.jpg')">
+          <div class="card-content">
+            <h3>Video 8</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/9hS5Opu3FDo" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+
+    <!-- Video 9 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/9.jpg')">
+          <div class="card-content">
+            <h3>Video 9</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/VsTL_l4Xcu0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+
+    <!-- Video 10 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/10.jpg')">
+          <div class="card-content">
+            <h3>Video 10</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/iptk8jsWyw4" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+
+    <!-- Video 11 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/11.jpg')">
+          <div class="card-content">
+            <h3>Video 11</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/krez6-QvgAw" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+
+    <!-- Video 12 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/12.JPG')">
+          <div class="card-content">
+            <h3>Video 12</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <video src="./videos/video4.mp4"></video>
+          </div>
+          <div class="video-controls" onclick="event.stopPropagation()">
+            <button onclick="playVideo(this)">Play</button>
+            <button onclick="pauseVideo(this)">Pause</button>
+            <input type="range" class="progress-bar" value="0" step="0.1" 
+                   oninput="seekVideo(this)">
+            <span class="time-display">0:00 / 0:00</span>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+
+    <!-- Video 13 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/13.jpg')">
+          <div class="card-content">
+            <h3>Video 13</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/hXGvS9-GlfM" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+    <!-- Video 14 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/14.jpg')">
+          <div class="card-content">
+            <h3>Video 14</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/qRogepIEZeg" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+    <!-- Video 15 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/15.jpg')">
+          <div class="card-content">
+            <h3>Video 15</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <video src="./videos/video5.mp4"></video>
+          </div>
+          <div class="video-controls" onclick="event.stopPropagation()">
+            <button onclick="playVideo(this)">Play</button>
+            <button onclick="pauseVideo(this)">Pause</button>
+            <input type="range" class="progress-bar" value="0" step="0.1" 
+                   oninput="seekVideo(this)">
+            <span class="time-display">0:00 / 0:00</span>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+    <!-- Video 16 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/16.jpg')">
+          <div class="card-content">
+            <h3>Video 16</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/3pipg95hvBw" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+    <!-- Video 17 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/17.jpg')">
+          <div class="card-content">
+            <h3>Video 17</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/pTwBnF96TMo" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+    <!-- Video 18 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/18.JPG')">
+          <div class="card-content">
+            <h3>Video 18</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <video src="./videos/video18.mp4"></video>
+          </div>
+          <div class="video-controls" onclick="event.stopPropagation()">
+            <button onclick="playVideo(this)">Play</button>
+            <button onclick="pauseVideo(this)">Pause</button>
+            <input type="range" class="progress-bar" value="0" step="0.1" 
+                   oninput="seekVideo(this)">
+            <span class="time-display">0:00 / 0:00</span>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+    <!-- Video 19 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/19.jpg')">
+          <div class="card-content">
+            <h3>Video 19</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <video src="./videos/video19.mp4"></video>
+          </div>
+          <div class="video-controls" onclick="event.stopPropagation()">
+            <button onclick="playVideo(this)">Play</button>
+            <button onclick="pauseVideo(this)">Pause</button>
+            <input type="range" class="progress-bar" value="0" step="0.1" 
+                   oninput="seekVideo(this)">
+            <span class="time-display">0:00 / 0:00</span>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+    <!-- Video 20 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/20.jpg')">
+          <div class="card-content">
+            <h3>Video 20</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <video src="./videos/video20.mp4"></video>
+          </div>
+          <div class="video-controls" onclick="event.stopPropagation()">
+            <button onclick="playVideo(this)">Play</button>
+            <button onclick="pauseVideo(this)">Pause</button>
+            <input type="range" class="progress-bar" value="0" step="0.1" 
+                   oninput="seekVideo(this)">
+            <span class="time-display">0:00 / 0:00</span>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+    <!-- Video 21 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/21.JPG')">
+          <div class="card-content">
+            <h3>Image 21</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <img src="./videos/img21.jpg">
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+    <!-- Video 22 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/22.jpg')">
+          <div class="card-content">
+            <h3>Video 22</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <video src="./videos/video22.mp4"></video>
+          </div>
+          <div class="video-controls" onclick="event.stopPropagation()">
+            <button onclick="playVideo(this)">Play</button>
+            <button onclick="pauseVideo(this)">Pause</button>
+            <input type="range" class="progress-bar" value="0" step="0.1" 
+                   oninput="seekVideo(this)">
+            <span class="time-display">0:00 / 0:00</span>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+    <!-- Video 23 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/23.jpg')">
+          <div class="card-content">
+            <h3>Video 23</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <video src="./videos/video23.mp4"></video>
+          </div>
+          <div class="video-controls" onclick="event.stopPropagation()">
+            <button onclick="playVideo(this)">Play</button>
+            <button onclick="pauseVideo(this)">Pause</button>
+            <input type="range" class="progress-bar" value="0" step="0.1" 
+                   oninput="seekVideo(this)">
+            <span class="time-display">0:00 / 0:00</span>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+    <!-- Video 24 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/24.jpg')">
+          <div class="card-content">
+            <h3>Video 24</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <video src="./videos/video24.mp4"></video>
+          </div>
+          <div class="video-controls" onclick="event.stopPropagation()">
+            <button onclick="playVideo(this)">Play</button>
+            <button onclick="pauseVideo(this)">Pause</button>
+            <input type="range" class="progress-bar" value="0" step="0.1" 
+                   oninput="seekVideo(this)">
+            <span class="time-display">0:00 / 0:00</span>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+    <!-- Video 25 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/25.jpg')">
+          <div class="card-content">
+            <h3>Video 25</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <video src="./videos/video25.mp4"></video>
+          </div>
+          <div class="video-controls" onclick="event.stopPropagation()">
+            <button onclick="playVideo(this)">Play</button>
+            <button onclick="pauseVideo(this)">Pause</button>
+            <input type="range" class="progress-bar" value="0" step="0.1" 
+                   oninput="seekVideo(this)">
+            <span class="time-display">0:00 / 0:00</span>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+    <!-- Video 26 -->
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('./images/26.jpg')">
+          <div class="card-content">
+            <h3>Video 26</h3>
+            <p>Click to play</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="video-container">
+            <video src="./videos/video26.mp4"></video>
+          </div>
+          <div class="video-controls" onclick="event.stopPropagation()">
+            <button onclick="playVideo(this)">Play</button>
+            <button onclick="pauseVideo(this)">Pause</button>
+            <input type="range" class="progress-bar" value="0" step="0.1" 
+                   oninput="seekVideo(this)">
+            <span class="time-display">0:00 / 0:00</span>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeCard(this.parentNode); event.stopPropagation()">×</button>
+    </div>
+
+  </div>
+  
+
+  <!-- last one -->
+  <div class="overlay" onclick="closeAllCards()"></div>
+</body>
+<script src="./script.js"></script>
+<script src="./particles.js"></script>
+</html>
